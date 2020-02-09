@@ -32,6 +32,81 @@ def add_gaussian_noise(image_in, noise_sigma=20):
     """
     return noisy_image, snr
 
+def add_tri_noise(image_in, noise_sigma=10):
+    img_ori = np.float64(np.copy(image_in))
+    img = np.float64(np.copy(image_in))
+    num = 0
+
+    h = img.shape[0]
+    w = img.shape[1]
+    num1 = int(h * w * noise_sigma / 40000)  # 多少个像素点添加椒盐噪声
+    for i in range(num1):
+        w1 = np.random.randint(2, w - 3)
+        h1 = np.random.randint(1, h - 2)
+        # img[h1, w1] = [255, 255, 255]
+        if np.random.randint(2) == 0:
+            img[h1-1, w1] = [0, 0, 0]
+            img[h1, w1-1] = img[h1, w1+1] = [0, 0, 0]
+            img[h1+1, w1-2:w1+3] = [0, 0, 0]
+        else:
+            img[h1-1, w1] = [255, 255, 255]
+            img[h1, w1-1] = img[h1, w1+1] = [255, 255, 255]
+            img[h1+1, w1-2:w1+3] = [255, 255, 255]
+    err = cv2.absdiff(img, img_ori)
+    ori_num = np.sum(img_ori**2)
+    num = np.sum(err**2)
+    snr = num/ori_num
+    return img, snr
+
+def add_lingxing_noise(image_in, noise_sigma=10):
+    img_ori = np.float64(np.copy(image_in))
+    img = np.float64(np.copy(image_in))
+    num = 0
+
+    h = img.shape[0]
+    w = img.shape[1]
+    num1 = int(h * w * noise_sigma / 20000)  # 多少个像素点添加椒盐噪声
+    for i in range(num1):
+        w1 = np.random.randint(1, w - 2)
+        h1 = np.random.randint(1, h - 2)
+        # img[h1, w1] = [255, 255, 255]
+        if np.random.randint(2) == 0:
+            img[h1-1, w1] = img[h1, w1-1] = img[h1, w1+1] = img[h1+1, w1] = [0, 0, 0]
+        else:
+            img[h1 - 1, w1] = img[h1, w1 - 1] = img[h1, w1 + 1] = img[h1 + 1, w1] = [255, 255, 255]
+    err = cv2.absdiff(img, img_ori)
+    ori_num = np.sum(img_ori**2)
+    num = np.sum(err**2)
+    snr = num/ori_num
+    return img, snr
+
+
+def add_square_noise(image_in, noise_sigma=10):
+    img_ori = np.float64(np.copy(image_in))
+    img = np.float64(np.copy(image_in))
+    num = 0
+
+    h = img.shape[0]
+    w = img.shape[1]
+    num1 = int(h * w * noise_sigma / 40000)  # 多少个像素点添加椒盐噪声
+    for i in range(num1):
+        w1 = np.random.randint(1, w - 2)
+        h1 = np.random.randint(1, h - 2)
+        # img[h1, w1] = [255, 255, 255]
+        if np.random.randint(2) == 0:
+            img[h1-1, w1-1:w1+2] = [0, 0, 0]
+            img[h1, w1-1] = img[h1, w1+1] = [0, 0, 0]
+            img[h1+1, w1-1:w1+2] = [0, 0, 0]
+        else:
+            img[h1-1, w1-1:w1+2] = [255, 255, 255]
+            img[h1, w1-1] = img[h1, w1+1] = [255, 255, 255]
+            img[h1+1, w1-1:w1+2] = [255, 255, 255]
+    err = cv2.absdiff(img, img_ori)
+    ori_num = np.sum(img_ori**2)
+    num = np.sum(err**2)
+    snr = num/ori_num
+    return img, snr
+
 
 def add_alpharnd_noise(image_in, a, noise_sigma=10):
     img_ori = np.float64(np.copy(image_in))
