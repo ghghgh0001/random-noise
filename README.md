@@ -8,3 +8,22 @@ The classification results can be calculated by "classify_alpha_0.9.py","classif
 The dataset can be easily downloaded by tensorflow 2.0, the code is "tf.keras.utils.get_file(origin='https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz', fname='flower_photos', untar=True)"
 
 This dataset need to be convert to 224*224 to test resnet50, vgg16 and vgg19.
+
+
+Some examples:
+
+salt-pepper noise(alpha=0.9):
+
+
+alpha=1.5:
+
+
+Gause noise(alpha=2.0):
+
+
+triangle:
+
+rhombus:
+
+square:
+
