@@ -14,10 +14,10 @@ Some examples:
 
 salt-pepper noise(alpha=0.9):
 
-![image](https://github.com/ghghgh0001/random-noise/tree/master/Sample%20Images/alpha0.9/1.jpg)
-![image](https://github.com/ghghgh0001/random-noise/tree/master/Sample%20Images/alpha0.9/2.jpg)
-![image](https://github.com/ghghgh0001/random-noise/tree/master/Sample%20Images/alpha0.9/3.jpg)
-![image](https://github.com/ghghgh0001/random-noise/tree/master/Sample%20Images/alpha0.9/4.jpg)
+![image](https://github.com/ghghgh0001/random-noise/tree/master/Example_Images/alpha0.9/1.jpg)
+![image](https://github.com/ghghgh0001/random-noise/tree/master/Example_Images/alpha0.9/2.jpg)
+![image](https://github.com/ghghgh0001/random-noise/tree/master/Example_Images/alpha0.9/3.jpg)
+![image](https://github.com/ghghgh0001/random-noise/tree/master/Example_Images/alpha0.9/4.jpg)
 
 alpha=1.5:
 
