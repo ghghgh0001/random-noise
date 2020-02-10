@@ -13,10 +13,10 @@ This dataset need to be convert to 224*224 to test resnet50, vgg16 and vgg19.
 Some examples:
 
 salt-pepper noise(alpha=0.9):
-![image](https://github.com/ghghgh0001/random-noise/tree/master/Example_Images/alpha0.9/1.jpg)
-![image](https://github.com/ghghgh0001/random-noise/tree/master/Example_Images/alpha0.9/2.jpg)
-![image](https://github.com/ghghgh0001/random-noise/tree/master/Example_Images/alpha0.9/3.jpg)
-![image](https://github.com/ghghgh0001/random-noise/tree/master/Example_Images/alpha0.9/4.jpg)
+![image](https://github.com/ghghgh0001/random-noise/blob/master/Example_Images/alpha0.9/1.jpg)
+![image](https://github.com/ghghgh0001/random-noise/blob/master/Example_Images/alpha0.9/2.jpg)
+![image](https://github.com/ghghgh0001/random-noise/blob/master/Example_Images/alpha0.9/3.jpg)
+![image](https://github.com/ghghgh0001/random-noise/blob/master/Example_Images/alpha0.9/4.jpg)
 
 alpha=1.5:
 ![image](https://github.com/ghghgh0001/random-noise/blob/master/Example_Images/alpha1.5/1.jpg)
