@@ -1,5 +1,5 @@
 # random-noise
-It is the code of our article "***"
+It is the code of our article "What's the relationship between CNNs and communication systems?"
 
 The random noised images can be made by "create_alpha.py", the hyperparameters can be changed inside it. 
 
